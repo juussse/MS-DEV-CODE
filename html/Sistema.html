@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+	<html lang="es">
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../css/etilos.css">
+		<link rel="icon" type="image/x-icon" href="../images/logo.jpg">
+		<title>Sistema de embarazo</title>
+
+	</head>
+	<body>
+
+		<div class="cursor">
+		</div>
+		<div class="cursor2">
+		</div>  
+		
+		<p id="demo1"></p>
+		<p id="demo2"></p>
+
+		<form id="formulario" class="forum">
+			<center> 
+				<label>
+					¿Estas de acuerdo con el horario que se te ha sido asignado para tu consulta? En caso de no poder, deje este campo vacio
+					</label><br>
+					<input type="radio" id="bien" name="confirmacion" value="1">
+					<label for="bien">Está bien, no tengo problema</label>
+
+			<br><br>
+				<center>
+				<br><br>
+						<table border="0" id="tabla1" height="500" cellpadding="0" cellspacing="0">
+							<tr>
+								<th>Fecha</th>
+								<th colspan="2">Asistencia</th>
+							</tr>
+							<tr>
+								<td><label id="fecha1"></label></td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia1" value="true" id="as1">
+									<label for="as1">Asistencia</label>
+								</td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia1" value="false" id="fa1">
+									<label for="fa1">Falta</label>
+								</td>
+							</tr>
+							<tr>
+								<td><label id="fecha2"></label></td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia2" value="true" id="as2">
+									<label for="as2">Asistencia</label>
+								</td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia2" value="false" id="fa2">
+									<label for="fa2">Falta</label>
+								</td>
+							</tr>
+							<tr>
+								<td><label id="fecha3"></label></td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia3" value="true" id="as3">
+									<label for="as3">Asistencia</label>
+								</td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia3" value="false" id="fa3">
+									<label for="fa3">Falta</label>
+								</td>
+							</tr>
+							<tr>
+								<td><label id="fecha4"></label></td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia4" value="true" id="as4">
+									<label for="as4">Asistencia</label>
+								</td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia4" value="false" id="fa4">
+									<label for="fa4">Falta</label>
+								</td>
+							</tr>
+							<tr>
+								<td><label id="fecha5"></label></td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia5" value="true" id="as5">
+									<label for="as5">Asistencia</label>
+								</td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia5" value="false" id="fa5">
+									<label for="fa5">Falta</label>
+								</td>
+							</tr>
+							<tr>
+								<td><label id="fecha6"></label></td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia6" value="true" id="as6">
+									<label for="as6">Asistencia</label>
+								</td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia6" value="false" id="fa6">
+									<label for="fa6">Falta</label>
+								</td>
+							</tr>
+							<tr>
+								<td><label id="fecha7"></label></td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia7" value="true" id="as7">
+									<label for="as7">Asistencia</label>
+								</td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia7" value="false" id="fa7"> 
+									<label for="fa7">Falta</label>
+								</td>
+							</tr>
+							<tr>
+								<td><label id="fecha8"></label></td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia8" value="true" id="as8">
+									<label for="as8">Asistencia</label>
+								</td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia8" value="false" id="fa8">
+									<label for="fa8">Falta</label>
+								</td>
+							</tr>
+							<tr>
+								<td><label id="fecha9"></label></td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia9" value="true" id="as9">
+									<label for="as9">Asistencia</label>
+								</td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia9" value="false" id="fa9">
+									<label for="sa9">Falta</label>
+								</td>
+							</tr>
+							<tr>
+								<td><label id="fecha10"></label></td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia10" value="true" id="as10">
+									<label for="as10">Asistencia</label>
+								</td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia10" value="false" id="fa10">
+									<label for="fa10">Falta</label>
+								</td>
+							</tr>
+							<tr>
+								<td><label id="fecha11"></label></td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia11" value="true" id="as11">
+									<label for="as11">Asistencia</label>
+								</td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia11" value="false" id="fa11">
+									<label for="fa11">Falta</label>
+								</td>
+							</tr>
+							<tr>
+								<td><label id="fecha12"></label></td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia12" value="true" id="as12">
+									<label for="as12">Asistencia</label>
+								</td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia12" value="false" id="fa12">
+									<label for="fa12">Falta</label>
+								</td>
+							</tr>
+							<tr>
+								<td><label id="fecha13"></label></td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia13" value="true" id="as13">
+									<label for="as13">Asistencia</label>
+								</td>
+								<td>
+									<input type="radio" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="asistencia13" value="false" id="fa13">
+									<label for="fa13">Falta</label>
+								</td>
+							</tr>
+						</table>
+				<br><br>
+				<button id="submit" name="enviar" onMouseOver="agra(100)"onMouseOut="agra2(100)">Enviar</button>
+			</center>
+		</form>
+		<script src="../js/fechas.js" type="text/javascript">
+			
+			document.getElementById('submit').onclick=function() 
+			{
+			    var selected = false;
+			    var radios = document.getElementsByName('confirmacion');
+			    for (var radio of radios)
+			    {
+			        if (radio.type === 'radio' && radio.checked)
+			        {
+			            selected = true;
+			        }	
+			    }
+			    if (!selected) {
+			    	alert('Estamos trabajando en encontrar otras opciones de horario para usted, por favor espere un momento');
+			    }
+			    
+			    var p=document.getElementById("como-box").value;
+				document.getElementById("demo2").innerHTML=p;
+
+			}	
+					
+		</script>
+		<style>
+		pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+		.string { color: green; }
+		.number { color: darkorange; }
+		.boolean { color: blue; }
+		.null { color: magenta; }
+		.key { color: red; }
+		.textoNegro { color: #000; }
+		</style>
+		<script type="text/javascript">
+			
+			var ancho = screen.width;
+			const cursor = document.querySelector(".cursor")
+			const cursor2 = document.querySelector(".cursor2")
+			//   const circularButton = document.querySelector('.circular-button')
+
+			var anx = 0;
+			var aly = 0;
+			var ksda = 0;
+
+			if(ancho >= 778){
+				// ---------------------------------- CURSOR ----------------------------------
+					
+				document.addEventListener('mousemove', e => {
+					anx = (e.clientX);
+					aly = (e.clientY);
+					var al = aly + ksda;
+					cursor2.setAttribute("style", "top: "+(al+20)+"px; left: "+(anx+20)+"px;");
+					cursor.setAttribute("style", "top: "+(al+5)+"px; left: "+(anx+5)+"px;");
+
+				
+				});
+				window.addEventListener('scroll', e=>{
+					ksda = window.scrollY;
+					var Y1 = ksda + aly;
+					cursor2.setAttribute("style", "top: "+(Y1+20)+"px; left: "+(anx+20)+"px;");
+					cursor.setAttribute("style", "top: "+(Y1+5)+"px; left: "+(anx+5)+"px;");
+				}); 
+			}
+
+			function agra(ancho){
+				cursor.classList.add('cur');
+				cursor2.classList.add('cur2');
+			}
+			function agra2(ancho){
+				cursor.classList.remove('cur');
+				cursor2.classList.remove('cur2');
+			}
+//------------------------------------------------esto lo ocupamos para mostrar el json de la pagina anterior
+		function syntaxHighlight(json) {
+			if (typeof json != 'string') {
+				 json = JSON.stringify(json, undefined, 2);
+			}
+			json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+			return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+				var cls = 'number';
+				if (/^"/.test(match)) {
+					if (/:$/.test(match)) {
+						cls = 'key';
+					} else {
+						cls = 'string';
+					}
+				} else if (/true|false/.test(match)) {
+					cls = 'boolean';
+				} else if (/null/.test(match)) {
+					cls = 'null';
+				}
+				return '<span class="' + cls + '">' + match + '</span>';
+			});
+		}
+
+		var registroEmbarazo=JSON.parse(localStorage.getItem('registroEmbarazo',registroEmbarazo));
+		//document.getElementById('demo1').innerHTML="<pre>"+syntaxHighlight(registroEmbarazo)+"</pre>";
+//------------------------------------------------esto lo ocupamos para mostrar formateado el json de la pagina anterior
+/*let html="Nombre:"+registroEmbarazo.nombre+"<br>";
+ html+="Semanas de embarazo:"+registroEmbarazo.semanasEmbarazo+"<br>";
+ html+="Numero de seguro social:"+registroEmbarazo.nss+"<br>";
+ html+="Edad:"+registroEmbarazo.edad+"<br>";
+ html+="Tipo de embarazo:"+registroEmbarazo.tipoEmbarazo+"<br>";
+ html+="Tipo de sangre:"+registroEmbarazo.tipoSangre+"<br>";
+ html+="Hipertencion:"+registroEmbarazo.hipertencion+"<br>";
+ html+="Diabetes:"+registroEmbarazo.diabetes+"<br>";
+ html+="Problemas Renales:"+registroEmbarazo.renales+"<br>";
+  html+="VIH:"+registroEmbarazo.vih+"<br>";
+  html+="VPH:"+registroEmbarazo.vph+"<br>";
+  html+="SIDA:"+registroEmbarazo.sida+"<br>";
+  html+="Sindorme de ovario poliquistico:"+registroEmbarazo.sindromeOvarioPoliquistico+"<br>";
+  html+="Leucemia:"+registroEmbarazo.leucemia+"<br>";
+  html+="Adicciones:"+registroEmbarazo.adicciones+"<br>";
+  html+="Golpes:"+registroEmbarazo.golpes+"<br>";
+  html+="Ansiedad:"+registroEmbarazo.ansiedad+"<br>";
+  html+="Depresion:"+registroEmbarazo.depresion+"<br>";
+  html+="Fecha de inicio:"+registroEmbarazo.fechaInicio+"<br>";
+  html+="Fecha de alivio:"+registroEmbarazo.fechaAlivio+"<br>";
+html+="VPH:"+registroEmbarazo.vph+"<br>";
+ */
+document.getElementById('demo2').innerHTML="<p class='textoNegro'>"+html+"</p>";
+
+		
+
+		
+		
+			document.getElementById('submit').onclick=function() 
+			{
+			    var selected = false;
+			    var radios = document.getElementsByName('confirmacion');
+			    for (var radio of radios)
+			    {
+			        if (radio.type === 'radio' && radio.checked)
+			        {
+			            selected = true;
+			        }	
+			    }
+			    if (!selected) {
+			    	alert('Estamos trabajando en encontrar otras opciones de horario para usted, por favor espere un momento');
+			    }
+			    
+			    var p=document.getElementById("como-box").value;
+				document.getElementById("demo2").innerHTML=p;
+
+			}			
+		</script>
+	</body>
+</html>

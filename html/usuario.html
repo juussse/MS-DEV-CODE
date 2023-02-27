@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="utf-8" />
+    <title>Ingreso Usuario</title>
+    <link rel="stylesheet" href="../css/disegno.css" />
+  </head>
+
+  <body>
+    <section>
+      <div class="inicio_box">
+        <h1>Sistema</h1>
+        <form onsubmit="submitForm(event)">
+          <!-- Usuario-->
+          <label for="usuario">Nombre</label
+          ><input type="text" placeholder="Ingresa tu nombre" id="nombre" />
+          <!-- NSS-->
+          <p></p>
+          <label for="nss">NSS</label
+          ><input type="text" placeholder="Ingresa tu NSS" id="nss" />
+          <!-- Boton-->
+          <input
+            type="submit"
+            value="Buscar"
+            id="btnContinuar"
+            onclick="registro()"
+          />
+          <!-- <button id="btnContinuar">Inicio</button> -->
+        </form>
+      </div>
+      <div class="patient-info">
+        <h2>Información del paciente</h2>
+        <ul>
+          <li id="nom"><strong>Nombre:</strong> Esperando...</li>
+          <li id="ed"><strong>Edad:</strong> Esperando...</li>
+          <li id="sem"><strong>Semanas de embarazo:</strong> Esperando...</li>
+          <li id="tiEm"><strong>Tipo de embarazo:</strong> Esperando...</li>
+          <li id="tiSa"><strong>Tipo de sangre:</strong> Esperando...</li>
+          <li id="pad"><strong>Padecimientos:</strong> Esperando...</li>
+          <li id="fechCit"><strong>Fecha de la primera cita:</strong> Esperando...</li>
+          <li id="fechAl"><strong>Fecha de alivio:</strong> Esperando...</li>
+        </ul>
+      </div>
+      
+    </section>
+  </body>
+
+  <script>
+
+
+    const nom = document.getElementById('nom')
+    const ed = document.getElementById('ed')
+    const sem = document.getElementById('sem')
+    const tiEm = document.getElementById('tiEm')
+    const tiSa = document.getElementById('tiSa')
+    const pad = document.getElementById('pad')
+    const fechCit = document.getElementById('fechCit')
+    const fechAl = document.getElementById('fechAl')
+
+    const patientInfo = document.querySelector('.patient-info')
+
+    
+
+
+    const box = document.querySelector(".inicio_box");
+    function submitForm(event) {
+      event.preventDefault();
+      // Aquí puedes agregar tu código para procesar los datos del formulario
+    }
+    function replaceDashes(inputString) {
+      if(typeof(inputString)==="string"){
+        let replacedString = inputString.replace(/-/g, " ");
+        replacedString = replacedString.replace(/\s{2,}/g, " ");
+        return replacedString;
+      }
+      return false;
+    }
+
+    function registro() {
+        // nom.innerHTML = "<strong>Nombre:</strong> Jesus"
+      var nombre = document.getElementById("nombre").value;
+      var nss = document.getElementById("nss").value;
+      
+      console.log(nombre, nss);
+      box.style.animation = "animacion 1s ease-in-out";
+      box.style.animationFillMode = "forwards";
+
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "http://192.168.100.12:5006/search");
+      xhr.setRequestHeader("Content-Type", "application/json");
+      const body = JSON.stringify({
+        nombre: nombre,
+        clave: nss,
+      });
+
+      xhr.onload = () => {
+        if (xhr.readyState == 4 && xhr.status == 201) {
+          let data = JSON.parse(xhr.responseText)
+          let info = data[data.length-1]
+          console.log(info)
+          nom.innerHTML = "<strong>Nombre:</strong> "+info.nombre
+          ed.innerHTML = "<strong>Edad:</strong> "+info.edad
+          sem.innerHTML = "<strong>Semanas de embarazo:</strong> "+info.semanas_emb
+          tiEm.innerHTML = "<strong>Tipo de embarazo:</strong> "+info.tipo_emb
+          tiSa.innerHTML = "<strong>Tipo de sangre:</strong> "+info.tipo_sangre
+          pad.innerHTML = "<strong>Padecimientos:</strong> "+replaceDashes(info.padecimientos)
+          fechCit.innerHTML = "<strong>Fecha de la primera cita:</strong> "+info.fecha_primera_cita
+          fechAl.innerHTML = "<strong>Fecha de alivio:</strong> "+info.fecha_alivio
+        
+          patientInfo.style.opacity = "1"
+          patientInfo.style.pointerEvents = "all"
+
+        } else {
+          console.log(`Error: ${xhr.status}`);
+        }
+      };
+      xhr.send(body);
+    }
+  </script>
+</html>

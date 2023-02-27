@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend", sans-serif;
+}
+body {
+  background: black;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background: linear-gradient(45deg, red, blue, green, black);
+  background-size: 400% 400%;
+  position: relative;
+  animation: cambiar 10s ease-in-out infinite;
+}
+#btnContinuar {
+  display: block;
+  transition: 200ms;
+  cursor: pointer;
+  width: 50vw;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@keyframes cambiar {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.inicio_box {
+  width: 525px;
+  height: 120px;
+  background: nome;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -45%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+  /* animation: animacion infinite; */
+  /* animation-name: animacion ;
+    animation-duration: 4.2s;
+    animation-delay: 0.6s; */
+  position: relative;
+}
+@keyframes animacion {
+  0% {
+  }
+  /* 50%{top:50px} */
+  /* 70%{ top: px;} */
+  100% {
+    top: -5px;
+  }
+}
+.inicio_box label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+}
+#btnContinuar:hover {
+  box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+}
+
+.inicio_box h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 26px;
+}
+
+.inicio_box input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.inicio_box input[type="text"],
+input[type="number"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+#btnContinuar {
+  border: none;
+  outline: none;
+  height: 40px;
+
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.patient-info {
+  list-style-type: none;
+  /* margin: 0; */
+  padding: 0;
+  color: black;
+
+  transition: 200ms;
+
+  width: 30vw;
+  margin: 20vh auto;
+  min-width: 400px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.patient-info li {
+  padding: 8px 16px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+  line-height: 1.5;
+  transition: 200ms;
+}
+
+.patient-info li:last-child {
+  border-bottom: none;
+}
+
+.patient-info li:nth-child(even) {
+  background-color: #e6e6e6;
+}
+
+.patient-info li:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.patient-info li:hover {
+  background-color: #ddd;
+  z-index: 10;
+  /* box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7; */
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: white;
+}
+

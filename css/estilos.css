@@ -1,0 +1,21 @@
+body
+{
+	font-family: Arial;
+	background-color: #3cb371;
+}
+
+pre
+{
+	font-family: Arial;
+}
+
+#tabla1
+{
+	text-align: center;
+	width: 35%
+}
+
+.num
+{
+	width: 100px;
+}

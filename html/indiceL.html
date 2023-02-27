@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lista</title>
+    <link rel="stylesheet" href="../css/estilosIndex.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Conectar usuarios</h1>
+    </header>
+
+    <label for="ip-addresses">Ingrese las direcciones IP:</label>
+    <textarea id="ip-addresses" rows="10"></textarea>
+    <label for="ip-addresses">Ingrese la IP a conectar:</label>
+    <input type="text" name="entrada" id="miInput">
+    <br />
+    <button onclick="getIPAddresses()">Conectar</button>
+    <!-- <button onclick="subir('Hernandez', '10', '32', 'normal', 'O+', 'vih', '20/23/12', '12/11/12', '00220102312')">Subir (prueba)</button> -->
+
+    <script>
+      // function subir(nombre, semEmb, edad, tipoEmb, tipoSan, padeci, fechaPrimCit, fechaAliv, clave, direccion){
+      //   // console.log('jeje')
+
+      //   const xhr = new XMLHttpRequest();
+      //   xhr.open("POST", direccion+"/add_patient");
+      //   xhr.setRequestHeader("Content-Type", "application/json");
+      //   const body = JSON.stringify({
+      //       "nombre":nombre,
+      //       "semanas_emb":semEmb,
+      //       "edad":edad,
+      //       "tipo_emb": tipoEmb,
+      //       "tipo_sangre": tipoSan,
+      //       "padecimientos": padeci,
+      //       "fecha_primera_cita": fechaPrimCit,  
+      //       "fecha_alivio": fechaAliv,
+      //       "clave":clave
+      //   });
+
+      //   xhr.onload = () => {
+      //     if (xhr.readyState == 4 && xhr.status == 201) {
+      //       console.log(JSON.parse(xhr.responseText));
+
+
+      //       xhr.open("GET", direccion+"/mine_block");
+      //       xhr.send();
+      //       xhr.responseType = "json";
+      //       xhr.onload = () => {
+      //         if (xhr.readyState == 4 && xhr.status == 200) {
+      //           const data = xhr.response;
+      //           console.log(data);
+
+      //           // const xhr = new XMLHttpRequest();
+      //           xhr.open("GET", direccion+"/get_nodos");
+      //           xhr.send();
+      //           xhr.responseType = "json";
+      //           xhr.onload = () => {
+      //             if (xhr.readyState == 4 && xhr.status == 200) {
+      //               const data = xhr.response;
+      //               console.log()
+      //               let nodos = data.nodes;
+      //               for(let i=0; i<nodos.length; i++){
+      //                 const xhr = new XMLHttpRequest();
+      //                 xhr.open("GET", "http://"+nodos[i]+"/replace_chain");
+      //                 xhr.send();
+      //                 xhr.responseType = "json";
+      //                 xhr.onload = () => {
+      //                   if (xhr.readyState == 4 && xhr.status == 200) {
+      //                     const data = xhr.response;
+      //                     console.log(data);
+      //                   } else {
+      //                     console.log(`Error: ${xhr.status}`);
+      //                   }
+      //                 };
+      //               }
+                    
+      //             } else {
+      //               console.log(`Error: ${xhr.status}`);
+      //             }
+      //           };
+
+      //         } else {
+      //           console.log(`Error: ${xhr.status}`);
+      //         }
+      //       };
+
+
+      //     } else {
+      //       console.log(`Error: ${xhr.status}`);
+      //     }
+      //   };
+      //   xhr.send(body);
+
+      // }
+      function getIPAddresses() {
+        const input = document.getElementById('miInput');
+        const valor = input.value;
+
+        const ipAddressesTextArea = document.getElementById("ip-addresses");
+        const ipAddressesList = ipAddressesTextArea.value.split(/[\n,]+/);
+        const xhr = new XMLHttpRequest();
+        
+        // const xhr = new XMLHttpRequest();
+        xhr.open("POST", (valor+"/connect_node"));
+        xhr.setRequestHeader("Content-Type", "application/json");
+        const body = JSON.stringify({
+            "nodes": ipAddressesList
+        });
+
+        xhr.onload = () => {
+          if (xhr.readyState == 4 && xhr.status == 201) {
+            console.log(JSON.parse(xhr.responseText));
+          } else {
+            console.log(`Error: ${xhr.status}`);
+          }
+        };
+        xhr.send(body);
+
+        localStorage.setItem("IPBas", valor)
+
+        
+      }
+    </script>
+    <!-- <script src="../js/main.js"></script> -->
+  </body>
+</html>

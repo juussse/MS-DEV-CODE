@@ -1,0 +1,246 @@
+*{
+  cursor: none;
+}
+
+
+html,
+body {
+  min-height: 100%;
+  background: black
+}
+body,
+div,
+form,
+input,
+select,
+p {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  /* font-family: Roboto, Arial, sans-serif; */
+  /* font-family: 'Josefin Sans', sans-serif; */
+  font-family: "Lexend", sans-serif;
+  /* font-family: 'Lexend', sans-serif; */
+  font-weight: 350;
+  font-size: 16px;
+  color: #eee;
+}
+body {
+  background-size: cover;
+}
+h1,
+h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+table{
+      /* border-color: red; */
+      border-collapse: collapse;
+}
+td{
+      background: rgba(255, 255, 255, 0.1);
+}
+#sup {
+  background: #5564ad;
+  font-weight: 400;
+}
+#imagen{
+      position: fixed;
+      top: 0%;
+      left: 0%;
+      margin-top: 12px;
+      margin-left: 10px;
+      width: 13vh;
+      height: 15vh;
+      pointer-events: none;
+}
+th {
+  background: rgba(18, 73, 106, 0.2);
+}
+#imagen img{
+      width: 13vh;
+      height: 15vh;
+      pointer-events: none;
+
+}
+h2 {
+  margin: 0 0 0 8px;
+}
+.main-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.left-part,
+form {
+  padding: 25px;
+}
+.left-part {
+  text-align: center;
+}
+.fa-graduation-cap {
+  font-size: 72px;
+}
+form {
+  /* background: rgba(0, 0, 0, 0.7);  */
+  background-image: linear-gradient(to bottom right, #5cb1d2, #43135c);
+  height: 110vh;
+}
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+}
+input,
+select {
+  padding: 5px;
+  margin-bottom: 30px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+input::placeholder {
+  color: #eee;
+}
+option:focus {
+  border: none;
+}
+option {
+  background: black;
+  border: none;
+}
+.checkbox input {
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+}
+.checkbox a {
+  color: #26a9e0;
+}
+.checkbox a:hover {
+  color: #85d6de;
+}
+.btn-item,
+button {
+  padding: 10px 5px;
+  transition: 200ms;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: none;
+  background: #26a9e0;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+}
+.btn-item {
+  display: inline-block;
+  margin: 20px 5px 0;
+}
+button {
+  width: 100%;
+}
+button:hover,
+.btn-item:hover {
+  background: #85d6de;
+}
+@media (min-width: 568px) {
+  html,
+  body {
+    height: 100%;
+  }
+  .main-block {
+    flex-direction: row;
+    height: calc(100% - 50px);
+  }
+  .left-part,
+  form {
+    flex: 1;
+    height: auto;
+  }
+  #tabla1 {
+    text-align: center;
+    border-color: #009b3e;
+    width: 35%;
+  }
+}
+
+button.circular-button {
+  transition: 200ms;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  /* font-size: ; */
+  cursor: none;
+}
+
+button.circular-button:hover {
+  background-color: #0072ec;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
+  font-size: 25px;
+
+}
+
+.cursor{
+	position: absolute;
+	z-index: 16;
+	width: 10px;
+	height: 10px;
+	margin-left: -10.5px;  /* quitale 5 */
+	margin-top: -10.5px;
+	background: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 100%;
+	pointer-events: none;
+	opacity: 1;
+}
+.cur{
+	opacity: 0;
+}
+.cursor2{
+	position: absolute;
+	z-index: 16;
+	width: 40px;
+	height: 40px;
+	margin-left: -40.25px; /* quitale 20 */
+	margin-top: -40.25px;
+	background: white;
+	border-radius: 100%;
+	opacity: .4;
+	transition: 110ms;
+    border-style: solid;
+    border-width: 0.5px;
+	pointer-events: none;
+}
+.cur2{
+	width: 100px;
+	height: 100px;
+	margin-left: -71px;
+	margin-top: -71px;
+	transition: 100ms;
+    background: white;
+    border-style: dashed;
+    border-width: 2px;
+    
+}

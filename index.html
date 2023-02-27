@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap" rel="stylesheet">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/etilos.css">
+		<link rel="icon" type="image/x-icon" href="images/logo.jpg">
+		<title>Formulario</title>
+
+	</head>
+	<body>
+		<div class="cursor">
+		</div>
+		<div class="cursor2">
+		</div>  
+
+
+		<button class="circular-button" onMouseOver="agra(100)"onMouseOut="agra2(100)"><i class="fa-solid fa-magnifying-glass"></i></button>
+		<p id="demo"></p>
+		<div id="imagen"><img src="images/Logo_IPN.png" alt="Algo ha salido mal, intenta recargar la pagina"></div>
+		<form action="html/Sistema.html">
+			<center>
+				<table border="1" cellpadding="6" cellspacing="0" style="border-color: #000">
+					<tr>
+
+						<td colspan="5" align="center" id="sup">Registro de Embarazo</td>
+
+					</tr>
+					<tr>
+						<td colspan="2">
+							<label>Ingrese las semanas de embarazo:</label><br>
+							<select name="combo" id="como-box" class="combox" onMouseOver="agra(100)"onMouseOut="agra2(100)">
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+							</select>	
+						</td>
+						<td colspan="2">
+							<label for="htpn">Nombre: </label><br>
+							<input type="text" name="nombre" id="nombre" onMouseOver="agra(100)"onMouseOut="agra2(100)">
+						</td>
+						<td colspan="2">
+							<label for="htpn">NSS: </label><br>
+							<input type="text" name="nss" id="nss" onMouseOver="agra(100)"onMouseOut="agra2(100)">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<label for="htpn">Edad: </label><br>
+							<input type="number" name="nombre" min="16" max="40" id='edad' onMouseOver="agra(100)"onMouseOut="agra2(100)"><br>
+						</td>
+						<td colspan="2">
+							<label for="htpn">Tipo de embarazo: </label><br>
+							<select id='tipoEmbarazo' onMouseOver="agra(100)"onMouseOut="agra2(100)">
+								<option value=null></option>
+								<option value="Alto Riesgo">Embarazo de alto riesgo</option>
+								<option value="Regular">Embarazo regular</option>
+							</select><br>
+						</td>
+						<td colspan="2">
+							<label for="htpn">Tipo de sangre: </label><br>
+							<select id='tipoSangre' onMouseOver="agra(100)"onMouseOut="agra2(100)">
+								<option value=''></option>
+								<option value="1">A+</option>
+								<option value="2">A-</option>
+								<option value="3">B+</option>
+								<option value="4">B-</option>
+								<option value="5">AB+</option>
+								<option value="6">AB-</option>
+								<option value="7">O+</option>
+								<option value="8">O-</option>
+							</select><br>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6"><center>
+							<label>¿Padeces alguna de las siguientes enfermedades?</label>
+						</center></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input type="checkbox" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="hipertencion" id="hptn" value="hipertencion">
+							<label for="htpn">Hipertension Arterial</label><br>
+
+							<input type="checkbox" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="diabetes" id="dbt" value="diabetes">
+							<label for="htpn">Diabetes</label><br>
+
+							<input type="checkbox" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="obesidad" id="obs" value="obesidad">
+							<label for="htpn">Obesidad</label><br>
+
+							<input type="checkbox" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="prenales" id="pren" value="problemasrenales">
+							<label for="htpn">Problemas Renales</label><br>
+
+							<input type="checkbox" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="VIH" id="vih" value="VIH">
+							<label for="htpn">VIH</label><br>
+						</td>
+						<td colspan="2">
+							<input type="checkbox" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="VPH" id="vph" value="VPH">
+							<label for="htpn">VPH</label><br>
+
+							<input type="checkbox" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="SIDA" id="sida" value="SIDA">
+							<label for="htpn">SIDA</label><br>
+
+							<input type="checkbox" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="edadavanzada" id="eava" value="edadavanzada">
+							<label for="htpn">Edad Avanzada(35 en adelante)</label><br>
+
+							<input type="checkbox" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="SOP" id="sop" value="SOP">
+							<label for="htpn">Síndrome de Ovario Poliquístico</label><br>
+
+							<input type="checkbox" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="cancer" id="cnc" value="cancer">
+							<label for="htpn">Cáncer</label><br>
+						</td>
+						<td colspan="2">
+							<input type="checkbox" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="leucemia" id="lcm" value="leucemia">
+							<label for="htpn">Leucemia</label><br>
+
+							<input type="checkbox" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="adicciones" id="adi" value="adicciones">
+							<label for="htpn">Adicciones(Alcohol, Tabaquismo, Drogas)</label><br>
+
+							<input type="checkbox" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="golpes" id="golp" value="golpes">
+							<label for="htpn">Golpes</label><br>
+
+							<input type="checkbox" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="ansiedad" id="ans" value="ansiedad">
+							<label for="htpn">Ansiedad</label><br>
+
+							<input type="checkbox" onMouseOver="agra(100)"onMouseOut="agra2(100)" name="depresion" id="dpr" value="depresion">
+							<label for="htpn">Depresion</label><br>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<center>
+								<label for="fechai" id="fecha1">Fecha de la primera cita: </label>
+								<input type="Date" name="date_control" id="fechai" value=""><br>
+							</center>	
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<center>
+								<label for="fechaa" id="fecha2">Fecha de alivio: </label>
+								<input type="Date" name="date_control" id="fechaa" value=""><br>
+							</center>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<center>
+								
+									<button type="button" id="btnContinuar" onMouseOver="agra(100)"onMouseOut="agra2(100)">Fechas</button>
+								
+							</center>
+						</td>
+					</tr>
+				</table>
+			</center>	
+		</form>
+	</body>
+	<script src='js/validacion.js'></script>
+	<script src="https://kit.fontawesome.com/4340ac13b4.js" crossorigin="anonymous"></script>
+	<!-- <script src='js/funcion.js'></script> -->
+</html>
